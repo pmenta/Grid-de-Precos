@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Karla', sans-serif;
+    font-size: 16px;
+}
+body {
+    background-color: hsl(204, 43%, 93%);
+}
+.bloco {
+    max-width: 960px;
+    box-shadow: -1px 5px 10px #333;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 80px;
+    display: grid;
+    grid-template-areas:
+    "h h"
+    "p s";
+}
+
+
+/*  Cabeçalho  */
+
+.cabecalho {
+    grid-area: h;
+    background-color: white;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 10 10 10 black;
+}
+.header__title {
+    color: hsl(179, 62%, 43%);
+    font-size: 24px;
+    font-weight: 700;
+    margin: 30px;
+}
+.info__cabecalho h2 {
+    margin: 30px;
+    font-size: 20px;
+    color: hsl(71, 73%, 54%);
+}
+.info__cabecalho p {
+    margin: 30px;
+    color: rgba(0, 0, 0, 0.336);
+}
+
+
+/* Containers */
+
+.container__precos {
+    grid-area: p;
+    background-color: hsl(179, 62%, 43%);
+    border-radius: 0px 0px 0px 10px;
+}
+.container__precos h1, h2, p {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: hsl(204, 43%, 93%);
+}
+.container__precos h1 {
+    margin: 45px;
+    font-size: 22px;
+    color: hsl(204, 43%, 93%);
+}
+.custo__mensal {
+    display: flex;
+}
+.container__preco {
+    margin-left: 45px;
+    font-size: 24px;
+    color: hsl(204, 43%, 93%);
+}
+.container__mensal {
+    margin-top: 6px;
+    color: hsla(203, 44%, 93%, 0.733);
+}
+.container__precos p {
+    margin: 45px;
+}
+.container__button {
+    background-color: hsl(71, 73%, 54%);
+    margin-left: 45px;
+    margin-bottom: 60px;
+    outline: unset;
+    border: none;
+    width: 80%;
+    height: 15%;
+    color: hsl(210, 100%, 100%);
+    position: relative;
+    transition: all 300ms ease;
+
+}
+.container__button:hover {
+    cursor: pointer;
+}
+
+
+.sobre {
+    grid-area: s;
+    background-color: hsl(179, 64%, 61%);
+    border-radius: 0px 0px 10px;
+}
+.sobre h1 {
+    color: hsl(204, 43%, 93%);
+    margin: 30px;
+    font-size: 22px;
+}
+.sobre p {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 625px){
+    .bloco {
+        grid-template-areas:
+        "h"
+        "p"
+        "s";
+        margin: 0;
+        border-radius: 0;
+    }
+    .sobre {
+        border-radius: 0;
+    }
+    .container__precos{
+        border-radius: 0;
+    }
+        
+}
